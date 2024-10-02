@@ -1,1 +1,1 @@
-# 2024-udp-tcp-http
+# Øvelse med UDP, TCP og HTTP
