@@ -8,7 +8,7 @@ const server = net.createServer((socket) => {
     console.log(`Received from client: ${message}`);
 
     const msg = message.split(':')[0];
-    if (msg === 'pong') {
+    if (msg === 'ping') {
       const [pingMsg, clientTimestamp] = message.split(':');
       const serverTimestamp = Date.now();
       console.log(`Round-trip time: ${serverTimestamp - parseInt(clientTimestamp)} ms`);
