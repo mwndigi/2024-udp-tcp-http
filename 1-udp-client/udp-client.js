@@ -112,7 +112,7 @@ function pingServersForRTT (serverAdress = []) {
     // Lytter til svar fra serveren
     // Udregner svartiden fra serveren ved brug af Date.now()
     client.on('message', function (incommingMessage, remote) {
-        console.log('Received', incommingMessage.toString());
+        console.log('Received', incommingMessage.toString(), 'from', remote.address, ':', remote.port, 'at', timestamp);
         const receivedTime = Date.now();
         const roundTripTime = receivedTime - timestamp;
         console.log('Round trip time:', roundTripTime, 'ms');
