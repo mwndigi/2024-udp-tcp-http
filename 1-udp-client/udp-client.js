@@ -51,6 +51,7 @@ function pingForRTT (serverAdress) {
         console.log('Received', incommingMessage.toString());
         const receivedTime = Date.now();
         const roundTripTime = receivedTime - timestamp;
+        console.log(remote);
         console.log('Round trip time:', roundTripTime, 'ms');
     });
 }
